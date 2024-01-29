@@ -1,0 +1,40 @@
+---In this question, You need to remove items from a list while iterating but without creating a different copy of a list.
+---Remove numbers greater than 50
+
+Hint
+
+--Get the list's size
+--Iterate list using while loop
+--Check if the number is greater than 50
+--If yes, delete the item using a del keyword
+--Reduce the list size
+
+Solution 1: Using while loop------
+num_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+i = 0
+# get list's size
+n = len(num_list)
+# iterate list till i is smaller than n
+while i < n:
+   # check if number is greater than 50
+   if num_list[i] > 50:
+      # delete current index from list
+      del num_list[i]
+      # reduce the list size
+      n = n -1
+   else
+      # move to next item
+      i = i +1
+print(num_list)
+
+Solution 2: Using for loop and range()
+
+--range(len(number_list) - 1, -1, -1): This creates a range object that starts from len(number_list) - 1 (the last index of the list) and 
+--goes down to -1 (exclusive) with a step of -1.This effectively generates the indices in reverse order, starting from the last index and going down to the first index (0).
+
+number_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in range(len(number_list) - 1, -1, -1):
+    if number_list[i] > 50:
+        del number_list[i]
+print(number_list)
+ 
