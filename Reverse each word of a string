@@ -1,0 +1,27 @@
+#Reverse each word of the string#
+** Hint **
+
+** Use split() method to split a string into a list of words
+** Reverse each word from a list
+** Use join to combine all words of the list
+## Slicing is a powerful technique for extracting portions of sequences (such as strings, lists, or tuples). The syntax for slicing is start:stop:step, where:
+start: The index at which the slice begins (inclusive).
+stop: The index at which the slice ends (exclusive).
+step: The step size between elements......
+start defaults to the beginning, stop defaults to the end, and step defaults to 1. 
+sequence[::-1]
+##
+
+def reverse_words(Sentence):        # defining a function called reverse_words that takes a parameter Sentence.
+   words = Sentence.split(" ")      # split string on whitespace
+# iterate list and reverse each word using ::-1   
+new_word_list = [word[::-1] for word in words]
+# Joining the new list of words
+res_str = " ".join(new_word_list)
+return(res_str)
+
+# Given String
+str1 = "My Name is Jessa"
+print(reverse_words(str1))
+ 
+
