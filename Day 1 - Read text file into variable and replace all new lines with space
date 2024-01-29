@@ -1,0 +1,22 @@
+Hint--
+##
+First, open the file in a read mode
+Next, read all content from a file using the read() function and assign it to a variable.
+Next, use string replace() function to replace all newlines (\n) with space (' ').
+Display final string
+##
+
+---with: This is a context manager in Python. It simplifies resource management (like file handling) by acquiring and releasing resources automatically. 
+When the indented block inside the with statement is entered, the file is opened, and when the block is exited, the file is automatically closed.
+-----open('sample.txt', 'r'): This function is used to open a file named 'sample.txt' in read mode ('r'). The second argument 'r' indicates that the file is opened for reading. 
+  If the file does not exist or cannot be opened, it will raise a FileNotFoundError.
+---as file: This assigns the opened file object to the variable file. 
+This variable can be used to perform operations on the file, such as reading its contents.
+
+---So, the purpose of this line is to open the file named 'sample.txt' for reading, create a context in which the file is open, and assign the file object to the variable file. 
+Once the indented block under with is executed, the file will be automatically closed, regardless of whether an exception occurs or not.
+
+with open ('sample.txt', 'r') as file:
+  data = file.read().replace('\n', ' ')
+  print(data)
+
